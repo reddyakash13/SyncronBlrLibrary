@@ -1,0 +1,26 @@
+<div
+	style="background-color: #eee; width: 80%; margin-left: auto; margin-right: auto;">
+	<div class="row" *ngIf="books">
+		<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"
+			*ngFor="let book of books">
+			<div class="uni">
+				<img class="flag" src="{{book.imageUrl}}" />
+				<div class="card card-block uniContent">
+					<h6 class="card-title uniName" title="{{book.bookName}}">{{book.bookName}}</h6>
+					<div class="card-text uniDetail">
+						<small class="subText"> By: {{book.author}} <br>
+							Edition: {{book.edition}} <br>
+						<br> <a href="{{book.imageUrl}}" target="_blank"><i
+								class="fa fa-link" aria-hidden="true"></i> Details</a>
+						</small>
+
+						<div class="led-box">
+							<div class="led-green" *ngIf="book.availability"></div>
+							<div class="led-red" *ngIf="!book.availability"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

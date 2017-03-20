@@ -1,0 +1,56 @@
+.uni {
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+    height: 130px;
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.uni .card{background-color: transparent; margin: 0;}
+.uniContent{
+    z-index: 2
+}
+.uniName {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.subText {
+	float: left;
+}
+
+.flag {
+    height: 100px;
+    float: left;
+    margin-right: 20px;
+}
+
+.led-box {
+  height: 30px;
+  width: 25%;
+  float: right;
+}
+
+.led-green {
+  margin: 0 auto;
+  width: 24px;
+  height: 24px;
+  background-color: #ABFF00;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px;
+}
+
+.led-red {
+  margin: 0 auto;
+  width: 24px;
+  height: 24px;
+  background-color: #F00;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 12px;
+  -webkit-animation: blinkRed 0.5s infinite;
+  -moz-animation: blinkRed 0.5s infinite;
+  -ms-animation: blinkRed 0.5s infinite;
+  -o-animation: blinkRed 0.5s infinite;
+  animation: blinkRed 0.5s infinite;
+}
