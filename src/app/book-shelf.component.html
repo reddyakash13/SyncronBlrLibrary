@@ -1,3 +1,4 @@
+<span defaultOverlayTarget></span>
 <div
 	style="background-color: #eee; width: 80%; margin-left: auto; margin-right: auto;">
 	<div class="row" *ngIf="books">
@@ -8,10 +9,9 @@
 				<div class="card card-block uniContent">
 					<h6 class="card-title uniName" title="{{book.bookName}}">{{book.bookName}}</h6>
 					<div class="card-text uniDetail">
-						<small class="subText"> By: {{book.author}} <br>
-							Edition: {{book.edition}} <br>
-						<br> <a href="{{book.imageUrl}}" target="_blank"><i
-								class="fa fa-link" aria-hidden="true"></i> Details</a>
+						<small class="subText"> By: {{book.author | slice:0:35}}<br>
+							Edition: {{book.edition}} <br> <br>
+							<a (click)="openCustom()"><i class="fa fa-link" aria-hidden="true"></i>Details</a>
 						</small>
 
 						<div class="led-box">
